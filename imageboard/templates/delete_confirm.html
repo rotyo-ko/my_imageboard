@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'imageboard/style.css' %}">
+{% endblock %}
+{% block title %}StrayCat|Top{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="card shadow-lg my-3 py-3">
+    <h4 class="text-center py-3 px-3">本当に削除しますか？</h4>
+    </br>
+    <div class="d-flex justify-content-center my-3">
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger mx-2 hover-opacity" style="background-color: rgb(235, 55, 154);">
+          確認
+        </button>
+      </form>
+      <a class="btn btn-secondary px-3 mx-2 hover-opacity" href="{% url 'board:list' %}">
+      キャンセル
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

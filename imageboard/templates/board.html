@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'imageboard/style.css' %}">
+{% endblock %}
+
+<link rel="stylesheet" href="{% static 'photos/style.css' %}">
+
+{% block title %}StrayCat|Top{% endblock %}
+
+{% block header %}みんなの投稿{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    {% for photo in photo_list %}
+    <div class="col-md-3 mb-3">
+      <div class="card h-100" style="border-radius: 10px;">
+        <a class="link-opacity-25-hover" href="{% url 'board:detail' pk=photo.pk %}">
+          <img src="{{ photo.thumbnail.url }}" class="img-fluid rounded hover-opacity" alt="photo" style="width: 100%; height: auto; object-fit: cover;">
+        </a>  
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>  
+
+{% endblock %}
