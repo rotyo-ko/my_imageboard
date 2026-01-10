@@ -10,6 +10,16 @@
 
 画像詳細ではログイン状態で他のユーザーがコメントを投稿、編集、削除ができます。
 
+## スクリーンショット
+
+### トップページ（画像一覧）
+
+![トップページ](docs/images/toppage.png)
+
+### 詳細ページ
+
+![詳細画面](docs/images/detail.png)
+
 ## データベースについて
 
   開発は PostgreSQL でおこないましたが、このリポジトリでは SQLite を使用しています。
@@ -75,7 +85,7 @@ python manage.py runserver
 http://127.0.0.1:8000/
   
 ## テストの実行
-ブラウザ、Web APIのテストがあります
+
 ```bash
 python manage.py test
 ```
