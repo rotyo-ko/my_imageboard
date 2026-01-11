@@ -1,5 +1,14 @@
 # 簡易画像掲示板
 
+## 使用技術
+
+- Python 3.13 以降
+- Django 5.2
+- Bootstrap 5
+- PostgreSQL（開発時）
+- SQLite（このリポジトリ）
+- django-environ
+
 ## 概要
 
 このプロジェクトは、Django の学習目的で作成した Web アプリケーションです。
